@@ -2,6 +2,20 @@
 
 {% block content %}
 
-<h1>Hola, bienvenido a mi tienda</h1>
+<h1>{{ nombre_tienda }}</h1>
+
+{% for producto in productos_destacados %}
+
+    <h2>{{ producto.nombre|upper }}</h2>
+
+    <p>{{ producto.descripcion|truncatechars:50 }}</p>
+
+    <p>Precio: {{ producto.precio|default:"Sin precio" }}</p>
+
+{% empty %}
+
+    <p>No hay productos destacados.</p>
+
+{% endfor %}
 
 {% endblock %}
