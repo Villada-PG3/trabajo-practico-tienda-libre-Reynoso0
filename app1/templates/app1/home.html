@@ -4,18 +4,26 @@
 
 <h1>{{ nombre_tienda }}</h1>
 
+<div class="row">
+
 {% for producto in productos_destacados %}
 
-    <h2>{{ producto.nombre|upper }}</h2>
+    <div class="col-md-4">
 
-    <p>{{ producto.descripcion|truncatechars:50 }}</p>
+        <h2>{{ producto.nombre|upper }}</h2>
 
-    <p>Precio: {{ producto.precio|default:"Sin precio" }}</p>
+        <p>{{ producto.descripcion|truncatechars:50 }}</p>
+
+        <p>Precio: {{ producto.precio|default:"Sin precio" }}</p>
+
+    </div>
 
 {% empty %}
 
     <p>No hay productos destacados.</p>
 
 {% endfor %}
+
+</div>
 
 {% endblock %}
