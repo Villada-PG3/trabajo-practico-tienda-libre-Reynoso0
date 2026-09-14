@@ -1,9 +1,50 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
 
-<h1>Acerca de mí</h1>
+            <div class="text-center mb-5">
+                <h1 class="fw-bold">Acerca de mí</h1>
+                <p class="fs-5 text-muted">
+                    Soy Mateo y estoy aprendiendo desarrollo web con Django.
+                </p>
+            </div>
 
-<p>Soy Mateo y estoy aprendiendo desarrollo web con Django.</p>
+            <div class="card border-0 shadow-sm p-4">
+                <h4 class="fw-semibold mb-3">Mi camino en programación</h4>
+                <p>
+                    Empecé este proyecto como parte de un curso de desarrollo web,
+                    con el objetivo de entender cómo funciona una aplicación real
+                    de punta a punta: desde el modelo de datos hasta lo que
+                    finalmente ve el usuario en el navegador.
+                </p>
+                <p>
+                    Esta tienda es mi espacio de práctica. Cada clase agrego algo
+                    nuevo: primero fueron las páginas estáticas, después conecté
+                    las vistas con la base de datos usando el ORM de Django, y
+                    ahora estoy trabajando en que todo se vea prolijo con Bootstrap.
+                </p>
 
+                <h4 class="fw-semibold mb-3 mt-4">Por qué Django</h4>
+                <p>
+                    Elegí Django porque permite pasar rápido de una idea a algo
+                    funcionando: el ORM hace que trabajar con la base de datos sea
+                    intuitivo, y el sistema de templates ayuda a mantener el HTML
+                    organizado sin repetir código entre páginas.
+                </p>
+
+                <h4 class="fw-semibold mb-3 mt-4">Próximos pasos</h4>
+                <p class="mb-0">
+                    A medida que avance el curso, la idea es sumar más funcionalidades
+                    a esta tienda: detalle de cada producto, un carrito de compras,
+                    y quizás en algún momento, un sistema de usuarios para poder
+                    guardar pedidos.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
 {% endblock %}
