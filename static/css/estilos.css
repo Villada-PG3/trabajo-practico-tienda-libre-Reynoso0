@@ -1,0 +1,6 @@
+/* Estilos propios de la tienda, además de lo que trae Bootstrap */
+
+.product-card img {
+    height: 180px;
+    object-fit: cover;
+}

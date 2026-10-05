@@ -11,6 +11,13 @@
         {% for producto in productos %}
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm product-card">
+                    {% if producto.imagen %}
+                        <img src="{{ producto.imagen.url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                    {% else %}
+                        <div class="card-img-top bg-secondary-subtle d-flex align-items-center justify-content-center" style="height: 180px;">
+                            <span class="text-muted small">Sin imagen</span>
+                        </div>
+                    {% endif %}
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-semibold">
                             <a href="{% url 'detalle_producto' producto.pk %}" class="text-decoration-none text-dark">

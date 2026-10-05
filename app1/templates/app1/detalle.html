@@ -11,7 +11,13 @@
 
             <div class="card border-0 shadow-sm">
                 <div class="card-body p-4 p-md-5">
-
+                    {% if producto.imagen %}
+                        <img src="{{ producto.imagen.url }}" class="img-fluid rounded mb-4" alt="{{ producto.nombre }}">
+                    {% else %}
+                        <div class="bg-secondary-subtle rounded d-flex align-items-center justify-content-center mb-4" style="height: 280px;">
+                            <span class="text-muted">Sin imagen</span>
+                        </div>
+                    {% endif %}
                     <span class="badge bg-secondary-subtle text-secondary-emphasis mb-2">
                         {{ producto.categoria }}
                     </span>
